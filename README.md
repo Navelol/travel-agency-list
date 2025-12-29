@@ -1,20 +1,27 @@
 # Travel Agent Pi-hole Whitelist
 
-A curated list of domains that travel agents need for their work. Use this to whitelist essential travel booking sites, airline systems, car rentals, hotels, and payment processors in Pi-hole.
+A curated list of domains that travel agents need for their work. Keep this as a reference when whitelisting essential travel booking sites, airline systems, car rentals, hotels, and payment processors in Pi-hole.
 
 ## Usage
 
-### Manual Import (One-by-one)
-In Pi-hole web interface, go to **Whitelist** and add each domain from the list.
+### Reference the List
+Use the raw GitHub URL as your go-to reference:
+```
+https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO-NAME/main/travel-agent-pihole-whitelist.txt
+```
 
-### Bulk Import via SSH
-1. SSH into your Pi-hole
-2. Download the list:
+Bookmark it and manually add domains to your Pi-hole whitelist as needed.
+
+### Manual Whitelist (Recommended)
+In Pi-hole web interface:
+1. Go to **Whitelist**
+2. Add domains from this list one-by-one as needed
+3. Check Pi-hole's **Query Log** to see what's being blocked and reference this list
+
+### Bulk Import (Optional)
+If you want to add everything at once via SSH:
 ```bash
 wget https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO-NAME/main/travel-agent-pihole-whitelist.txt
-```
-3. Import all domains:
-```bash
 while read domain; do pihole -w "$domain"; done < travel-agent-pihole-whitelist.txt
 ```
 
@@ -26,7 +33,7 @@ while read domain; do pihole -w "$domain"; done < travel-agent-pihole-whitelist.
 - **Hotels**: Marriott, Hilton, Hyatt, IHG, Choice, Wyndham
 - **Cruise Lines**: Carnival, Royal Caribbean, Norwegian, Princess, etc.
 - **OTAs**: Expedia, Priceline, Booking.com, Travelocity, Orbitz
-- **Payment Processors**: PayPal, Stripe
+- **Payment Processors**: PayPal, Stripe, Google Analytics/Tag Manager
 
 ## Contributing
 
