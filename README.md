@@ -7,7 +7,7 @@ A curated list of domains that travel agents need for their work. Keep this as a
 ### Reference the List
 Use the raw GitHub URL as your go-to reference:
 ```
-https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO-NAME/main/travel-agent-pihole-whitelist.txt
+https://raw.githubusercontent.com/Navelol/travel-agency-list/main/list.txt
 ```
 
 Bookmark it and manually add domains to your Pi-hole whitelist as needed.
@@ -21,8 +21,8 @@ In Pi-hole web interface:
 ### Bulk Import (Optional)
 If you want to add everything at once via SSH:
 ```bash
-wget https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO-NAME/main/travel-agent-pihole-whitelist.txt
-while read domain; do pihole -w "$domain"; done < travel-agent-pihole-whitelist.txt
+wget https://raw.githubusercontent.com/Navelol/travel-agency-list/main/list.txt
+while read domain; do pihole -w "$domain"; done < list.txt
 ```
 
 ## What's Included
